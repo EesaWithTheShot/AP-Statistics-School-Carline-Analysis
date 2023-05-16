@@ -31,19 +31,29 @@ class dfDay:
             if (row["Difference"].total_seconds()/60) > 300:
                 self.df.drop(index, inplace=True)
         self.df["Diff Mins"] = self.df["Diff Mins"].astype(int)
-        self.df["Time release"] = self.df["Time release"].astype(int)                
+        self.df["Diff release"] = self.df["Diff release"].astype(int)                
     
     def scatter_release_timediff(self):
         '''Plots a scatter plot relating the time difference of entering from the release time to the Time difference from time in time out.'''
         fig, ax = plt.subplots()
         plot = sns.scatterplot(data=self.df,
-                        x="Time release", y="Diff Mins", hue="Grade", palette=self.cmrpalette,s=70)
+                        x="Diff Release", y="Diff Mins", hue="Grade", palette=self.cmrpalette,s=100)
         fig.suptitle(f"{self.grade_level} {self.date.strftime(r'%A %B %d, %Y')} ",fontsize="48")
         plt.legend(fontsize="30")
         plt.xlabel(f"Time from release at {self.release_time} (minutes)",fontsize="30")
         plt.ylabel(f"Time spent in school (minutes)",fontsize="30")
         plt.show()
-        
+
+    def lmplot_release_timediff(self):
+        '''Plots a scatter plot (with LSRL) relating the time difference of entering from the release time to the Time difference from time in time out.'''
+        fig, ax = plt.subplots()
+        plot = sns.lmplot(data=self.df,
+                        x="Diff Release", y="Diff Mins", palette=self.cmrpalette)
+        fig.suptitle(f"{self.grade_level} {self.date.strftime(r'%A %B %d, %Y')} ",fontsize="48")
+        plt.legend(fontsize="30")
+        plt.xlabel(f"Time from release at {self.release_time} (minutes)",fontsize="30")
+        plt.ylabel(f"Time spent in school (minutes)",fontsize="30")
+        plt.show()
 
     def showData(self):
         return self.df
@@ -52,7 +62,8 @@ class dfDay:
 
 
 absolute_path = os.path.abspath("")
-hs1104df = pd.read_csv(absolute_path + "\cleanerHS1104.csv")
+
+hs1104df = pd.read_csv(absolute_path + "\main\maintestHS1104v2.csv")
 data = dfDay("HS","11-4-2022",hs1104df)
 print(data)
-print(data.scatter_release_timediff())
+print(data.lmplot_release_timediff())
