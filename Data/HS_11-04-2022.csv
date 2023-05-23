@@ -1,4 +1,4 @@
-Dismissal Session,Pickup Area,Date,AD Method,Dismissal Location,Time In,Time Out,Time In Clean,Time Out Clean,Time Difference,Diff Mins,Release,Diff Release,carpool_id,Level
+Dismissal Session,Pickup Area,Date,AD Method,Grade,Time In,Time Out,Time In Clean,Time Out Clean,Time Difference,Diff Mins,Release,Diff Release,carpool_id,Level
 Daily Dismissal,Lower Loop,11/4/22 14:00,AUTO,12th Grade,11/4/22 13:25,11/4/22 13:27,13:25,13:27,0:02:00,2,11/4/2022 15:15:00,-110,111461,HS
 Daily Dismissal,Lower Loop,11/4/22 14:00,AUTO,10th Grade,11/4/22 13:54,11/4/22 15:14,13:54,15:14,1:20:00,80,11/4/2022 15:15:00,-81,111487,HS
 Daily Dismissal,Lower Loop,11/4/22 14:00,AUTO,10th Grade,11/4/22 14:11,11/4/22 14:20,14:11,14:20,0:09:00,9,11/4/2022 15:15:00,-64,111534,HS

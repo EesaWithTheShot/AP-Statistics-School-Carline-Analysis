@@ -1,4 +1,4 @@
-Dismissal Session,Pickup Area,Date,AD Method,Dismissal Location,Time In,Time Out,Time In Clean,Time Out Clean,Time Difference,Diff Min,Release,Diff Release,carpool_id,Level
+Dismissal Session,Pickup Area,Date,AD Method,Grade,Time In,Time Out,Time In Clean,Time Out Clean,Time Difference,Diff Mins,Release,Diff Release,carpool_id,Level
 Daily Dismissal,Upper Loop,11/2/22 14:00,AUTO,2nd Grade,11/2/22 13:31,11/2/22 14:23,13:31,14:23,0:52:00,52,11/2/2022 14:00:00,-29,110694,ES
 Daily Dismissal,Upper Loop,11/2/22 14:00,AUTO,Kindergart,11/2/22 13:40,11/2/22 14:23,13:40,14:23,0:43:00,43,11/2/2022 14:00:00,-20,110695,ES
 Daily Dismissal,Upper Loop,11/2/22 14:00,AUTO,2nd Grade,11/2/22 13:40,11/2/22 14:23,13:40,14:23,0:43:00,43,11/2/2022 14:00:00,-20,110695,ES
