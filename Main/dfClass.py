@@ -31,7 +31,7 @@ class dfDay:
             if (row["Difference"].total_seconds()/60) > 300:
                 self.df.drop(index, inplace=True)
         self.df["Diff Mins"] = self.df["Diff Mins"].astype(int)
-        self.df["Diff release"] = self.df["Diff release"].astype(int)                
+        self.df["Diff Release"] = self.df["Diff Release"].astype(int)                
     
     def scatter_release_timediff(self):
         '''Plots a scatter plot relating the time difference of entering from the release time to the Time difference from time in time out.'''
