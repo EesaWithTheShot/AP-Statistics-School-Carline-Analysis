@@ -26,4 +26,4 @@ ms1102 = dfcl.DataframeDay("MS", "11-2-2022",ms1102df)
 es1104 = dfcl.DataframeDay("ES", "11-4-2022",es1104df)
 es1102 = dfcl.DataframeDay("ES", "11-2-2022",es1102df)
 
-es1102.scatter_in_timediff()
+dfcl.DataframeDay.oneDayScatter(es1104,ms1104,hs1104)
