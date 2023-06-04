@@ -70,6 +70,19 @@ class DataframeDay:
         plt.ylabel(f"Time spent in school (minutes)",fontsize="30")
         plt.show()
 
+    def scatter_out_timediff(self):
+        '''Plots a scatter plot relating the ACTUAL time of exit to the Time difference from time in time out.'''
+        fig, ax = plt.subplots()
+        plot = sns.scatterplot(data=self.df,
+                        x="Time Out", y="Diff Mins", hue="Grade", palette=self.cmrpalette,s=100)
+        fig.suptitle(f"{self.grade_level} {self.date.strftime(r'%A %B %d, %Y')} ",fontsize="48")
+        plt.legend(fontsize="30")
+        plt.xlabel(f"Time Exited",fontsize="30")
+        plt.ylabel(f"Time spent in school (minutes)",fontsize="30")
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%I:%M'))
+        plt.tick_params(axis='both', which='major', labelsize=24)
+        plt.show()
+
     @staticmethod
     def oneDayScatter(df1, df2, df3):
         '''Creates a plot of all the grade levels from one singular day'''
